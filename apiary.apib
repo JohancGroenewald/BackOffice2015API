@@ -1,0 +1,26 @@
+FORMAT: 1A
+HOST: http://groenewald.dyndns.org:9000/
+
+# BackOffice2015 API
+BackOffice2015 API is a service provided to remote terminals vending airtime.
+
+# Group Terminals
+Access to BO2015 API
+
+## Terminal Set-up [/terminal/{mac_address}/{machine_id}]
+
++ Parameters
+
+    + mac_address (required, string, `00-26-B9-9B-61-BF`) - MAC address of the terminal
+    + machine_id  (required, string, `000003`           ) - BackOffice machine id to link to
+
+### Get terminal initialisation information [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "UUID"     : "1dc966c8-a7b1-4157-bde7-ad94c659afcb",
+                "machineId": "000003"
+            }
+        ]
